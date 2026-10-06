@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# install.sh — pasang skill "slang-id" ke AI tools / agent AI pilihanmu.
+# install.sh, pasang skill "slang-id" ke AI tools / agent AI pilihanmu.
 #
 # Cara pakai (interaktif):
 #   ./install.sh
@@ -44,7 +44,7 @@ TOOL_LABELS=(
   "claude:Claude Code (~/.claude/skills)"
   "codex:Codex CLI (~/.codex/skills)"
   "cursor:Cursor (~/.cursor/skills)"
-  "agents:Standar AgentSkills (~/.agents/skills) — dibaca banyak tools/AI agent baru"
+  "agents:Standar AgentSkills (~/.agents/skills), dibaca banyak tools/AI agent baru"
   "custom:Direktori sendiri (ditanya nanti)"
 )
 
@@ -78,7 +78,7 @@ if [[ -z "$TOOLS" ]]; then
   if [[ "$ASSUME_YES" == 1 ]]; then
     log "--tools wajib diisi saat --yes tanpa pilihan interaktif"; exit 1
   fi
-  log "Mau dipasang ke tool/AI agent apa? (pisahkan koma, mis. 1,3 — atau 'all')"
+  log "Mau dipasang ke tool/AI agent apa? (pisahkan koma, mis. 1,3, atau 'all')"
   i=1
   for entry in "${TOOL_LABELS[@]}"; do
     log "  $i) ${entry#*:}"
@@ -155,7 +155,7 @@ do_uninstall_one() { # $1 = tool id
 if [[ "$ASSUME_YES" == 0 ]]; then
   if [[ "$METHOD_GIVEN" == 0 ]]; then
     log "Metode instalasi:"
-    log "  1) symlink (disarankan — update repo otomatis kepakai)"
+    log "  1) symlink (disarankan, update repo otomatis kepakai)"
     log "  2) copy (mandiri, tidak ikut update)"
     ask "Pilihan [1]:"
     case "${REPLY:-1}" in
@@ -188,7 +188,7 @@ if [[ "$UNINSTALL" == 1 ]]; then
   exit 0
 fi
 
-log "Install skill '$SKILL_NAME' — method: $METHOD, scope: $SCOPE ($BASE_DESC)"
+log "Install skill '$SKILL_NAME', method: $METHOD, scope: $SCOPE ($BASE_DESC)"
 log "Target: $TOOLS"
 confirm "Lanjut?" || { log "Dibatalkan."; exit 0; }
 

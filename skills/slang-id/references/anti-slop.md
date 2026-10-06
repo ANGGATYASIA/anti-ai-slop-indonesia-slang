@@ -1,6 +1,6 @@
 # Katalog AI-Slop Bahasa Indonesia
 
-Daftar pola yang membuat teks tercium sebagai hasil generate AI, plus cara memperbaikinya. Berlaku untuk SEMUA register — bahkan teks formal/baku wajib bebas dari pola ini.
+Daftar pola yang membuat teks tercium sebagai hasil generate AI, plus cara memperbaikinya. Berlaku untuk SEMUA register, bahkan teks formal/baku wajib bebas dari pola ini.
 
 ## 1. Pembuka klise zaman
 
@@ -22,7 +22,7 @@ Sesudah: "Data bocor sekali, kepercayaan pelanggan hilang selamanya."
 - "Jangan ragu untuk bertanya jika ada yang kurang jelas!"
 - "Sekian dan terima kasih."
 
-**Perbaikan:** akhiri dengan kalimat yang menyimpulkan sikap atau ajakan spesifik. Kalau memang tidak ada yang perlu ditutup, berhenti saja — tidak semua teks butuh penutup.
+**Perbaikan:** akhiri dengan kalimat yang menyimpulkan sikap atau ajakan spesifik. Kalau memang tidak ada yang perlu ditutup, berhenti saja, tidak semua teks butuh penutup.
 
 ## 3. Paralelisme "bukan hanya X, tetapi juga Y"
 
@@ -55,7 +55,7 @@ Kata-kata yang hampir tidak pernah dipakai orang Indonesia dalam percakapan asli
 | Kata slop | Masalah | Ganti dengan |
 |---|---|---|
 | hiruk pikuk | klise puitis AI | rame, riuh, sibuk |
-| lanskap (kiasan) | "lanskap politik", "lanskap digital" | peta, dunia, ranah — atau sebut langsung bendanya |
+| lanskap (kiasan) | "lanskap politik", "lanskap digital" | peta, dunia, ranah, atau sebut langsung bendanya |
 | krusial | terdengar terjemahan | penting banget, genting, vital (konteks formal) |
 | penting untuk dicatat / diketahui | pengisi | langsung ke catatannya, atau "satu hal:" |
 | perlu diingat bahwa | pengisi | hapus, langsung ke isinya |
@@ -74,15 +74,15 @@ Kata-kata yang hampir tidak pernah dipakai orang Indonesia dalam percakapan asli
 
 ## 7. Dekorasi tipografi
 
-- Em dash (—) dipakai sebagai jeda gaya di mana-mana. Bahasa Indonesia natural memakai koma, titik, atau tanda hubung biasa (-).
-- Title Case Untuk Setiap Kata pada judul — tidak lazim di Bahasa Indonesia. Pakai kapitalisasi kalimat biasa.
+- Em dash (—): **jangan pernah pakai**, di register apa pun. Ini sidik jari AI paling gampang dikenali di 2026. Butuh jeda? Pakai titik. Butuh sisipan? Pakai koma atau kurung. Butuh rentang? Pakai hubung biasa (-). Aturan lengkap: `pola-kalimat.md` bagian "Larangan em dash".
+- Title Case Untuk Setiap Kata pada judul, tidak lazim di Bahasa Indonesia. Pakai kapitalisasi kalimat biasa.
 - Emoji hiasan di setiap bullet atau setiap paragraf. Satu-dua emoji boleh untuk konten sosmed; selebihnya mengganggu.
-- Bold untuk seluruh frasa ("**sangat penting untuk diperhatikan**") — bold hanya untuk 1-2 kata kunci, atau tidak sama sekali.
+- Bold untuk seluruh frasa ("**sangat penting untuk diperhatikan**"), bold hanya untuk 1-2 kata kunci, atau tidak sama sekali.
 
 ## 8. Struktur kaku yang repetitif
 
-- Selalu "Pertama, ... Kedua, ... Ketiga, ..." — sesekali boleh, tapi kalau tiap jawaban begini = pola.
-- "Berikut adalah beberapa hal yang perlu Anda ketahui:" — basa-basi pembuka daftar. Langsung ke daftarnya.
+- Selalu "Pertama, ... Kedua, ... Ketiga, ...", sesekali boleh, tapi kalau tiap jawaban begini = pola.
+- "Berikut adalah beberapa hal yang perlu Anda ketahui:", basa-basi pembuka daftar. Langsung ke daftarnya.
 - Setiap paragraf panjangnya sama dan diakhiri kalimat penyimpul yang generik.
 
 **Perbaikan:** variasi. Campur kalimat pendek dan panjang. Ada daftar yang cukup 2 poin, ada penjelasan yang cukup 1 paragraf.
@@ -102,7 +102,7 @@ Satu-dua boleh untuk nada sopan. Kalau tiap klaim dilembutkan, teksnya terdengar
 **Perbaikan:** cari pelakunya, pakai verba aktif.
 Sesudah: "Tim marketing mengoptimalkan strategi." / "Pelayanan harus naik kelas."
 
-## 11. Kalque Inggris — terjemahan harfiah yang kaku
+## 11. Kalque Inggris, terjemahan harfiah yang kaku
 
 AI yang "berpikir" dalam bahasa Inggris sering menerjemahkan idiom secara harfiah:
 
@@ -114,10 +114,10 @@ AI yang "berpikir" dalam bahasa Inggris sering menerjemahkan idiom secara harfia
 | "Itu masuk akal" untuk semua persetujuan | Variasi: "iya juga ya", "bener juga", "masuk" |
 | "Saya mendengar Anda" (I hear you) | "Ngerti kok maksudnya." |
 
-Pinjaman Inggris yang sudah natural (`worth it`, `relate`, `healing`) BOLEH dipakai —
+Pinjaman Inggris yang sudah natural (`worth it`, `relate`, `healing`) BOLEH dipakai 
 yang dilarang adalah struktur Inggris yang dipaksa masuk ke Bahasa Indonesia.
 
-## 12. Sapaan campur aduk — persona ganda
+## 12. Sapaan campur aduk, persona ganda
 
 Satu teks memakai `bestie`, `Saudara`, dan `kak` sekaligus = AI yang tidak punya persona.
 Aturan lengkap: `konsistensi-gaya.md` bagian 3. Intinya: pilih SATU pasangan sapaan
@@ -144,4 +144,4 @@ Jalankan checklist ini sebelum menyerahkan teks apa pun:
 
 ## Cara memakai katalog ini
 
-Jangan menghafal — jadikan checklist sekali jalan. Baca draf dari atas ke bawah, tandai pola yang kena, perbaiki, lanjut. Setelah 2-3 kali, matamu terlatih dan prosesnya otomatis.
+Jangan menghafal, jadikan checklist sekali jalan. Baca draf dari atas ke bawah, tandai pola yang kena, perbaiki, lanjut. Setelah 2-3 kali, matamu terlatih dan prosesnya otomatis.

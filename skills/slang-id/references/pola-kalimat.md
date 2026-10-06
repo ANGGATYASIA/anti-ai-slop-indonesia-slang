@@ -1,93 +1,127 @@
-# Pola Kalimat Natural Bahasa Indonesia
+# Pola Kalimat Natural: ACUAN UTAMA
 
-Slang tanpa pola kalimat yang benar = tempelan. Ini fondasinya: cara orang Indonesia asli menyusun kalimat saat ngomong santai.
+> File ini adalah **acuan pola kalimat** skill ini. Kalau ada contoh atau pola di file
+> lain yang bertentangan dengan isi file ini, ikuti file ini.
+>
+> Katalog 80 pola siap pakai (P01–P80) ada di `leksikon-gaul.md`. Anggap itu *kamus*,
+> file ini *tatabahasanya*. Kamus tanpa tatabahasa = tempelan.
 
-> Katalog 80 pola siap pakai (P01–P80) — dari `gas survei` sampai `POV:` — ada di
-> `leksikon-gaul.md` bagian "Pola Kalimat". File ini menjelaskan *prinsip* di baliknya;
-> leksikon memberi *rumus* konkretnya.
+## Prinsip dasar: manusia ngomong berantakan yang wajar
 
-## 1. Partikel akhir — penanda nada
+Teks AI itu terlalu rapi: tiap kalimat lengkap, tiap paragraf seimbang, tiap argumen
+dibuka dan ditutup. Manusia asli: mulai dari tengah, motong kalimat, ngulang kata
+buat nekunin, koreksi diri, kadang nggak selesaiin kalimat.
 
-Partikel adalah pembeda terbesar antara teks AI dan manusia. Tiap partikel mengubah nada:
+Natural bukan berarti sempurna. Tapi perhatikan batasnya: jangan bikin typo buatan
+atau singkatan alay ("syudah", "enak bnget"), autocorrect 2026 bikin orang ngetik
+rapi, typo buatan justru ketahuan. Yang dibuat natural adalah **struktur kalimat**,
+bukan ejaan.
 
-- **-lah**: penegas, perintah halus. "Duduklah." / "Coba deh, enak lah."
-- **-dong**: meminta/menyuruh dengan manja. "Ceritain dong." / "Jangan gitu dong."
-- **-sih**: penekan, kontras, atau penasaran. "Kok mahal sih?" / "Aku sih oke-oke aja."
-- **-kok**: defensif, membantah anggapan. "Aku udah bayar kok." / "Gampang kok."
-- **-kan**: minta persetujuan, mengingatkan. "Udah jelas kan?" / "Katanya besok kan?"
-- **-deh**: pasrah, menyerahkan pilihan. "Terserah deh." / "Yaudah deh, ikut."
-- **-tuh / -nih**: penunjuk. "Yang itu tuh." / "Nih, cobain."
+## Pola-pola real percakapan manusia
 
-Aturan pakai: maksimal satu partikel per kalimat, dan tidak setiap kalimat perlu partikel. Dua partikel berturut-turut dalam dua kalimat berurutan masih oke; tiga = mulai terdengar karikatur.
+### 1. Jawab dulu, jelaskan kemudian (atau nggak usah)
 
-## 2. Subjek yang di-drop
+Manusia menjawab pertanyaan dalam 1-3 kata dulu, baru (kalau perlu) menjelaskan.
+AI melakukan kebalikannya: muter-muter, jawabannya di akhir.
 
-Orang Indonesia jarang menyebut subjek kalau sudah jelas dari konteks. AI hampir selalu menyebutkannya.
+- AI: "Berdasarkan ketersediaan saat ini, unit tersebut masih tersedia dan dapat disurvei pada hari Sabtu."
+- Natural: "Masih ada. Sabtu bisa survei."
+- Kalau penjelasannya nggak ditanya, nggak usah dijelasin.
 
-- AI: "Apakah kamu sudah mencoba fitur barunya?"
-- Natural: "Udah coba fiturnya yang baru?"
-- AI: "Saya akan mengirimkan laporannya besok pagi."
-- Natural: "Laporannya dikirim besok pagi." / (ke atasan, santai) "Besok pagi saya kirim laporannya."
+### 2. Koreksi diri
 
-## 3. Kalimat pendek dan fragmen yang disengaja
+Manusia mikir sambil ngetik. Sisipan "eh", "ding", "maksudnya" adalah sidik jari manusia
+yang hampir nggak pernah muncul di teks AI.
 
-Teks AI cenderung semua kalimatnya "lengkap" dan seimbang. Manusia motong.
+- "Besok, eh lusa ding. Besok gue keluar kota."
+- "Harganya 700... maksudnya 650. Yang 700 itu tipe atasnya."
+- Pakai sekali-sekali, di tempat yang wajar: angka, jadwal, nama. Bukan tiap kalimat.
 
-- "Gampang." / "Udah, gas." / "Fix, ambil yang ini."
-- "Soal harga? Aman."
-- Fragmen dipakai untuk penekanan setelah kalimat panjang: "Dia ngerjain semuanya sendirian semalaman, revisi tiga kali, klien tetap komplain. Capek."
+### 3. Pengulangan untuk penekanan
 
-Jangan tiap paragraf diakhiri fragmen — itu jadi pola baru.
+AI nggak pernah mengulang kata. Manusia mengulang buat nekunin maksud.
 
-## 4. Topikalisasi — taruh topik di depan
+- "Jauh. Jauh banget."
+- "Gue udah bilang. Udah."
+- Ini pengulangan utuh satu frasa, sekali saja. Beda dengan gagap.
 
-Pola "Soal X, ..." / "Kalau X, ..." sangat Indonesia dan langsung terdengar natural.
+### 4. Spesifik, bukan generik
 
-- "Soal deadline, tenang — masih seminggu."
-- "Kalau soal rasa, ini juara."
-- "Yang bikin kesel tuh bukan harganya, tapi pelayanannya."
+Manusia menyebut nama bendanya. AI ngomong "hal tersebut", "tempat makan", "sore hari".
 
-## 5. Pertanyaan retoris sebagai transisi
+- AI: "Kita bisa bertemu di tempat makan pada sore hari."
+- Natural: "Ketemuan di warteg depan kantor jam 4 ya."
+- Angka konkret mengalahkan kata sifat: "5 menit" lebih manusiawi dari "cepat",
+  "Rp650 juta" lebih manusiawi dari "terjangkau".
 
-Bukan untuk dijawab, tapi untuk mengajak mikir bareng:
+### 5. Opini tanpa alasan
 
-- "Masa sih segampang itu? Ternyata iya."
-- "Terus gimana caranya? Gini."
-- "Emang bisa? Bisa, nih caranya."
+Manusia berani berpendapat tanpa disertasi. AI selalu merasa wajib menjelaskan KENAPA.
 
-## 6. Ritme: campur panjang-pendek
+- "Nggak worth it sih."
+- "Skip aja."
+- Titik. Nggak ada "karena berdasarkan pertimbangan...".
 
-Paragraf AI: semua kalimat 15-25 kata. Paragraf manusia: ada yang 3 kata, ada yang 30 kata.
+### 6. Understatement: datar untuk hal besar
 
-Contoh ritme yang hidup:
-> "Rapatnya molor dua jam. Dua jam. Untung materinya daging semua, jadi nggak berasa rugi. Yang nyesek cuma satu: parkirnya penuh pas datang telat."
+- "Ya udah, putus."
+- "Biasa aja."
+- AI melebih-lebihkan segalanya ("sangat luar biasa"). Manusia justru mengecilkan,
+  dan itu yang bikin terdengar asli.
 
-## 7. Kontras register sebagai punchline
+### 7. Mulai dari tengah
 
-Teknik kuat untuk konten: bangun dengan bahasa rapi, jatuhkan dengan gaul.
+Nggak ada setup, nggak ada "berdasarkan hal tersebut".
 
-> "Laporan keuangan kuartal ini menunjukkan pertumbuhan 40% dibanding periode yang sama tahun lalu. Bahasa gampangnya: duitnya nambah banyak."
+- "Eh, tadi gue coba fiturnya. Ngebug."
+- Langsung ke kejadian. Konteks menyusul kalau ditanya.
 
-Dipakai sekali per teks. Dua kali = gimmick.
+### 8. Kalimat gantung yang disengaja
 
-## 8. Pembuka kalimat yang natural
+- "Ya udah lah ya..."
+- "Gitu deh pokoknya."
+- Menandai: males njelasin lebih jauh, atau emosi yang nggak perlu diucapin.
+  Jangan tiap paragraf, nanti jadi gimmick.
 
-AI: "Penting untuk dicatat bahwa...", "Perlu dipahami bahwa...", "Dalam konteks ini,..."
-Natural: langsung. "Intinya:", "Singkatnya:", "Nah,", "Jadi gini,", "Oke,"
+### 9. Jawab dengan pertanyaan balik
 
-"Jadi gini" dan "Nah" adalah pembuka paling Indonesia yang ada — pakai tanpa ragu di register kasual.
+- "Emang kenapa?"
+- "Terus maunya gimana?"
+- Bikin teks terasa dialog, bukan ceramah satu arah.
 
-## 9. Penutup kalimat yang natural
+### 10. Satu ide, satu kalimat pendek
 
-AI menutup dengan simpulan generik. Manusia menutup dengan sikap:
+Rata-rata kalimat chat manusia: 3-8 kata. Kalau kalimatmu 25 kata dengan tiga anak
+kalimat, itu esai, bukan obrolan. Potong.
 
-- "Gitu aja sih."
-- "Udah, itu aja."
-- "Pokoknya coba dulu."
-- Ajakan spesifik: "Link-nya di bio, gas sebelum kehabisan."
+### 11. Partikel secukupnya (bukan tiap kalimat)
 
----
+Partikel (`sih`, `dong`, `kok`, `kan`, `deh`) memang penanda manusia, tapi manusia
+nggak pakai di tiap kalimat. Satu partikel per 2-3 kalimat sudah cukup.
+Tiga kalimat berturut-turut semuanya berpartikel = karikatur = ketahuan.
 
-## Latihan 30 detik
+## Larangan em dash
 
-Ambil satu paragraf tulisanmu. Terapkan: (1) drop subjek yang jelas, (2) tambah satu partikel yang pas, (3) potong satu kalimat panjang jadi dua. Baca keras. Kalau sudah terdengar kayak ngobrol, selesai.
+Jangan pernah pakai **—** (em dash) di teks kasual maupun semi-formal. Di 2026 ini
+adalah sidik jari AI yang paling gampang dikenali.
+
+- Butuh jeda penegas? Pakai titik. "Bukan males. Itu ngerawat diri." lebih manusiawi
+  dari "Bukan males — itu ngerawat diri."
+- Butuh sisipan? Pakai koma atau kurung.
+- Butuh rentang? Pakai hubung biasa (-): "jam 9-5".
+- Bahkan di teks formal, Bahasa Indonesia baku jarang pakai em dash. Koma dan titik
+  dua sudah cukup.
+
+## Biar nggak lebay (jangan semua teknik dipakai sekaligus)
+
+- Satu teknik per teks biasanya cukup. Dua kalau teksnya panjang.
+- Jangan akhiri SEMUA paragraf dengan punchline atau fragmen, itu jadi pola baru
+  yang sama AI-nya dengan pola lama.
+- Jangan campur teknik koreksi diri + pengulangan + kalimat gantung dalam satu
+  paragraf. Pilih satu.
+- Lebay = semua trik dikeluarin sekaligus. Natural = satu trik, dipakai wajar.
+
+## Uji akhir
+
+Baca keras. Kalau terdengar kayak orang lagi cerita ke temennya, bukan lagi
+presentasi, bukan lagi baca naskah. Lolos.

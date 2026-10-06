@@ -6,7 +6,7 @@ Skill anti AI-slop Bahasa Indonesia. Bikin AI nulis kayak orang Indonesia asli: 
 
 ## Kenapa ada skill ini
 
-Tulisan AI berbahasa Indonesia gampang ketahuan: pembuka "Di era digital yang serba cepat ini", paralelisme "bukan hanya X tetapi juga Y", tripel kosong "cepat, tepat, dan akurat", kosakata terjemahan ("hiruk pikuk", "krusial", "lanskap"), dan penutup ritual "Semoga bermanfaat!". Skill ini membuang semuanya, lalu menggantinya dengan cara ngomong orang Indonesia beneran — partikel (`sih`, `dong`, `kok`), kalimat yang dipotong, dan slang yang masih hidup.
+Tulisan AI berbahasa Indonesia gampang ketahuan: pembuka "Di era digital yang serba cepat ini", paralelisme "bukan hanya X tetapi juga Y", tripel kosong "cepat, tepat, dan akurat", kosakata terjemahan ("hiruk pikuk", "krusial", "lanskap"), dan penutup ritual "Semoga bermanfaat!". Skill ini membuang semuanya, lalu menggantinya dengan cara ngomong orang Indonesia beneran, partikel (`sih`, `dong`, `kok`), kalimat yang dipotong, dan slang yang masih hidup.
 
 ## Isi skill
 
@@ -14,7 +14,7 @@ Tulisan AI berbahasa Indonesia gampang ketahuan: pembuka "Di era digital yang se
 skills/slang-id/
   SKILL.md                    # aturan main + alur kerja (6 langkah)
   references/
-    anti-slop.md              # katalog pola khas AI + pindai cepat 30 detik — baca ini dulu
+    anti-slop.md              # katalog pola khas AI + pindai cepat 30 detik, baca ini dulu
     konsistensi-gaya.md       # kunci suara (voice lock), checklist tiap output, anti register-slip
     pola-kalimat.md           # partikel, ellipsis, topikalisasi, ritme
     kata-gaul.md              # ringkasan slang kekinian per fungsi + yang sudah basi
@@ -24,7 +24,7 @@ skills/slang-id/
     sebelum-sesudah.md        # 7 contoh nyata: caption, chat CS, email, konsistensi persona, dll.
 ```
 
-Prinsip yang dipegang: **slang itu bumbu, bukan makanan utama**. Skill ini juga mengatur *register* — gaul untuk kasual, profesional santai untuk kerja, baku rapi untuk formal. Salah register lebih fatal daripada salah kata.
+Prinsip yang dipegang: **slang itu bumbu, bukan makanan utama**. Skill ini juga mengatur *register*, gaul untuk kasual, profesional santai untuk kerja, baku rapi untuk formal. Salah register lebih fatal daripada salah kata.
 
 ## Instalasi
 
@@ -48,7 +48,7 @@ Setelah instalasi, restart tool-nya bila skill belum muncul. Skill aktif otomati
 
 ## Kompatibilitas
 
-Mengikuti standar [SKILL.md](https://agentskills.io) — satu format yang dibaca Claude Code, Codex CLI, Cursor, Gemini CLI, OpenClaw, Hermes Agent, dan ~40 tools lainnya. Tidak ada kode yang dijalankan, tidak ada ketergantungan, tidak ada telemetri. Cuma Markdown.
+Mengikuti standar [SKILL.md](https://agentskills.io), satu format yang dibaca Claude Code, Codex CLI, Cursor, Gemini CLI, OpenClaw, Hermes Agent, dan ~40 tools lainnya. Tidak ada kode yang dijalankan, tidak ada ketergantungan, tidak ada telemetri. Cuma Markdown.
 
 ## Contoh
 
@@ -56,10 +56,10 @@ Sebelum:
 > Di era digital yang serba cepat ini, penting untuk dicatat bahwa menjaga kesehatan mental bukan hanya penting, tetapi juga krusial bagi produktivitas kita semua.
 
 Sesudah:
-> Hidup lagi kenceng-kencengnya, kepala ikut rame. Sesekali ngerem itu bukan males — itu ngerawat diri.
+> Hidup lagi kenceng-kencengnya, kepala ikut rame. Sesekali ngerem itu perlu, namanya juga ngerawat diri.
 
 Contoh lengkap: [examples/sebelum-sesudah.md](skills/slang-id/examples/sebelum-sesudah.md).
 
 ## Lisensi
 
-MIT — pakai bebas, modifikasi bebas, komersial bebas. Lihat [LICENSE](LICENSE).
+MIT, pakai bebas, modifikasi bebas, komersial bebas. Lihat [LICENSE](LICENSE).

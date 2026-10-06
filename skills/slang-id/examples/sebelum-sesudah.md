@@ -10,7 +10,7 @@ Tiap contoh menunjukkan teks khas AI-slop, lalu versi yang sudah diperbaiki deng
 > Di era digital yang serba cepat ini, kami menghadirkan promo spesial yang bukan hanya menarik, tetapi juga menguntungkan bagi Anda semua. Jangan lewatkan kesempatan emas ini! Segera hubungi kami untuk informasi lebih lanjut. Semoga bermanfaat!
 
 **Sesudah:**
-> Promo akhir bulan nih. Diskonnya gede, stoknya dikit — kamu tahu lah rumusnya. Link di bio, gas sebelum nyesel.
+> Promo akhir bulan nih. Diskon 30%, stok tinggal 4. Link di bio, gas sebelum nyesel.
 
 *Yang diperbaiki: pembuka klise zaman, paralelisme "bukan hanya... tetapi juga", "Anda", penutup ritual, kalimat pasif.*
 
@@ -34,7 +34,7 @@ Tiap contoh menunjukkan teks khas AI-slop, lalu versi yang sudah diperbaiki deng
 > Selamat pagi. Sehubungan dengan email sebelumnya, penting untuk dicatat bahwa deadline laporan triwulan dimajukan menjadi hari Jumat. Mohon agar seluruh tim dapat menyelesaikan bagiannya masing-masing tepat waktu. Atas perhatian dan kerja samanya, saya ucapkan terima kasih.
 
 **Sesudah:**
-> Pagi semua. Info aja, deadline laporan triwulan maju ke Jumat. Tolong beresin bagiannya masing-masing ya — kalau ada kendala, kabarin saya hari ini biar bisa dibantu.
+> Pagi semua. Info aja, deadline laporan triwulan maju ke Jumat. Tolong beresin bagiannya masing-masing ya, kalau ada kendala, kabarin saya hari ini biar bisa dibantu.
 
 *Yang diperbaiki: "sehubungan dengan", "penting untuk dicatat", "mohon agar", penutup surat dinas. Nada tetap sopan, tapi seperti manusia.*
 
@@ -46,7 +46,7 @@ Tiap contoh menunjukkan teks khas AI-slop, lalu versi yang sudah diperbaiki deng
 > Cloud computing adalah sebuah teknologi yang memungkinkan Anda untuk menyimpan dan mengakses data melalui internet, bukan hanya melalui perangkat lokal Anda, tetapi juga dari mana saja. Hal ini sangat krusial di era modern ini.
 
 **Sesudah:**
-> Jadi gini. Cloud itu simpelnya: file kamu disimpan di komputer orang lain (server), terus kamu akses lewat internet. Makanya bisa buka dokumen yang sama dari HP, laptop, warnet — bebas. Praktis sih.
+> Jadi gini. Cloud itu simpelnya: file kamu disimpan di komputer orang lain (server), terus kamu akses lewat internet. Makanya bisa buka dokumen yang sama dari HP, laptop, warnet, bebas. Praktis sih.
 
 *Yang diperbaiki: definisi kamus ("adalah sebuah teknologi yang"), paralelisme, "krusial", "di era modern ini". Diganti analogi konkret + "jadi gini" + partikel.*
 
@@ -64,7 +64,7 @@ Tiap contoh menunjukkan teks khas AI-slop, lalu versi yang sudah diperbaiki deng
 
 ---
 
-## 6. Formal/baku — tetap manusiawi, tanpa slang
+## 6. Formal/baku, tetap manusiawi, tanpa slang
 
 Skill ini juga membersihkan teks formal. Slang tidak dipakai, tapi pola AI-slop tetap dibuang.
 
@@ -92,17 +92,17 @@ Skill ini juga membersihkan teks formal. Slang tidak dipakai, tapi pola AI-slop 
 Kunci suara: mode `casual`, intensitas 2, sapaan `aku–kamu`, partikel andalan `sih, dong`,
 kata andalan: `gokil, gas, santai`. Pantangan: `Anda`, `Saudara`, `hiruk pikuk`.
 
-**Turn 1 — user:** "kapan selesainya?"
+**Turn 1, user:** "kapan selesainya?"
 **AI:** "Besok siang kelar. Nanti aku kabarin begitu beres, santai aja."
 
-**Turn 2 — user:** "bisa dipercepat?"
-**AI:** "Hmm, mepet sih. Yang bisa aku gas cuma bagian desain — sisanya nunggu data dari kamu. Gimana?"
+**Turn 2, user:** "bisa dipercepat?"
+**AI:** "Hmm, mepet sih. Yang bisa aku gas cuma bagian desain, sisanya nunggu data dari kamu. Gimana?"
 
-**Turn 3 — user:** "oke deh, kabarin ya"
+**Turn 3, user:** "oke deh, kabarin ya"
 **AI:** "Siap. Begitu desainnya kelar, langsung aku kirim."
 
 *Yang dijaga: sapaan `aku–kamu` tidak pernah berubah; partikel dari daftar andalan;
 tidak ada kata pantangan yang selip; janji ("kabarin") konsisten antar turn;
 panjang sesuai medium chat (1-2 kalimat). Bandingkan dengan AI tanpa kunci suara
-yang di turn 3 tiba-tiba menjawab: "Baik, Saudara akan kami informasikan." —
+yang di turn 3 tiba-tiba menjawab: "Baik, Saudara akan kami informasikan." 
 satu kalimat itu saja cukup untuk meruntuhkan tiga turn sebelumnya.*

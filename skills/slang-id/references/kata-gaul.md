@@ -1,6 +1,6 @@
 # Inventaris Kata Gaul Kekinian
 
-Dikurasi per Oktober 2026. Bahasa gaul bergerak cepat — prinsipnya: kalau kamu ragu sebuah kata masih dipakai, jangan pakai. Daftar "sudah basi" di bawah wajib dihindari.
+Dikurasi per Oktober 2026. Bahasa gaul bergerak cepat, prinsipnya: kalau kamu ragu sebuah kata masih dipakai, jangan pakai. Daftar "sudah basi" di bawah wajib dihindari.
 
 ## Cara memakai daftar ini
 
@@ -57,9 +57,9 @@ Jangan menabur kata gaul seperti bumbu tabur. Pilih 1-2 yang paling pas dengan *
 - **aku – kamu**: lebih manis, cocok untuk konten yang hangat.
 - **kak**: sapaan sopan tapi santai, standar untuk CS dan sosmed.
 - **mas/mbak**: sapaan umum yang aman lintas daerah.
-- Hindari "Anda" di konten kasual — terdengar seperti surat dinas. "Kamu" atau "kalian" jauh lebih natural.
+- Hindari "Anda" di konten kasual, terdengar seperti surat dinas. "Kamu" atau "kalian" jauh lebih natural.
 
-## Sudah basi — JANGAN dipakai
+## Sudah basi: JANGAN dipakai
 
 Kata-kata ini pernah gaul, sekarang terdengar seperti orang yang ketinggalan zaman atau AI yang dilatih data lama:
 
@@ -67,12 +67,12 @@ Kata-kata ini pernah gaul, sekarang terdengar seperti orang yang ketinggalan zam
 - "kepo" masih oke, tapi "kepoin" berlebihan sudah lewat masanya
 - alay (sudah jadi hinaan, bukan gaul)
 - "cogan/cecan" (objektifikasi, hindari)
-- Bahasa "4l4y" (angka ganti huruf) — mati total
+- Bahasa "4l4y" (angka ganti huruf), mati total
 - "syantik", "syudah" (plesetan yang sudah basi)
 
 ## Aturan kesegaran
 
 1. Slang dari internet umurnya 1-3 tahun. Kalau sebuah kata sudah dipakai di iklan TV atau spanduk pemerintah, ia sudah mati sebagai slang.
-2. Jangan mencampur slang Jakarta dengan slang daerah secara acak dalam satu teks — pilih satu suara.
+2. Jangan mencampur slang Jakarta dengan slang daerah secara acak dalam satu teks, pilih satu suara.
 3. Serapan Inggris (lowkey, literally, red flag) wajar dipakai anak muda kota; untuk audiens umum/bapak-bapak, batasi.
 4. Kalau target audiens di atas 40 tahun atau konteks daerah, "gaul" yang aman = bahasa santai tanpa slang berat: kalimat pendek, partikel ringan, tanpa kata yang perlu dijelaskan.
