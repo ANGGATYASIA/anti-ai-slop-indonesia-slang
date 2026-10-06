@@ -125,8 +125,8 @@ harness_target() { # $1 = tool id -> echo path file konfigurasi, atau kosong
     codex)
       [[ "$SCOPE" == "project" ]] && echo "$PWD/AGENTS.md" || echo "$HOME/.codex/AGENTS.md" ;;
     cursor)
-      [[ "$SCOPE" == "project" ]] && echo "$PWD/.cursor/rules/slang-id-always-on.md" \
-                                   || echo "$HOME/.cursor/rules/slang-id-always-on.md" ;;
+      [[ "$SCOPE" == "project" ]] && echo "$PWD/.cursor/rules/slang-id.mdc" \
+                                   || echo "$HOME/.cursor/rules/slang-id.mdc" ;;
     *) echo "" ;;
   esac
 }
@@ -150,7 +150,7 @@ enable_always_on() { # $1 = tool id, $2 = direktori skill terpasang
   fi
   mkdir -p "$(dirname "$target")"
   if [[ "$1" == "cursor" ]]; then
-    directive_block "$2" > "$target"
+    sed "s|{{SKILL_DIR}}|$2|g" "$SCRIPT_DIR/rules/slang-id.mdc" > "$target"
     log "  + selalu-on: $target"
     return 0
   fi

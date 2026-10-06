@@ -1,0 +1,15 @@
+{
+  "description": "Skill anti AI-slop Bahasa Indonesia: kata gaul kekinian, pola kalimat natural, dan voice lock agar AI konsisten terdengar seperti orang Indonesia asli.",
+  "name": "anti-ai-slop-indonesia-slang",
+  "owner": {
+    "name": "ANGGATYASIA"
+  },
+  "plugins": [
+    {
+      "description": "Anti AI-slop Bahasa Indonesia. Bikin AI terdengar seperti orang Indonesia asli di setiap output: percakapan, tulisan, apa pun kecuali kode.",
+      "name": "slang-id",
+      "source": "./",
+      "version": "1.1.0"
+    }
+  ]
+}

@@ -8,25 +8,56 @@ Skill anti AI-slop Bahasa Indonesia. Bikin AI nulis kayak orang Indonesia asli: 
 
 Tulisan AI berbahasa Indonesia gampang ketahuan: pembuka "Di era digital yang serba cepat ini", paralelisme "bukan hanya X tetapi juga Y", tripel kosong "cepat, tepat, dan akurat", kosakata terjemahan ("hiruk pikuk", "krusial", "lanskap"), dan penutup ritual "Semoga bermanfaat!". Skill ini membuang semuanya, lalu menggantinya dengan cara ngomong orang Indonesia beneran, partikel (`sih`, `dong`, `kok`), kalimat yang dipotong, dan slang yang masih hidup.
 
-## Isi skill
+## Isi repo
 
 ```
-skills/slang-id/
-  SKILL.md                    # aturan main + alur kerja (6 langkah)
+skills/slang-id/          # skill utama (format SKILL.md universal)
+  SKILL.md                # aturan main + alur kerja + wizard instalasi first-run
   references/
-    anti-slop.md              # katalog pola khas AI + pindai cepat 30 detik, baca ini dulu
-    konsistensi-gaya.md       # kunci suara (voice lock), checklist tiap output, anti register-slip
-    pola-kalimat.md           # partikel, ellipsis, topikalisasi, ritme
-    kata-gaul.md              # ringkasan slang kekinian per fungsi + yang sudah basi
-    leksikon-gaul.md          # leksikon besar: ratusan istilah, 80 pola (P01–P80),
-                              # modul Jakarta/Jawa/Sunda, normalisasi, moderasi
+    anti-slop.md          # katalog pola khas AI + pindai cepat 30 detik, baca ini dulu
+    konsistensi-gaya.md   # kunci suara (voice lock), checklist tiap output, anti register-slip
+    pola-kalimat.md       # ACUAN UTAMA pola kalimat percakapan manusia
+    kata-gaul.md          # ringkasan slang kekinian per fungsi + yang sudah basi
+    leksikon-gaul.md      # leksikon besar: ratusan istilah, 80 pola (P01-P80),
+                          # modul Jakarta/Jawa/Sunda, normalisasi, moderasi
   examples/
-    sebelum-sesudah.md        # 7 contoh nyata: caption, chat CS, email, konsistensi persona, dll.
+    sebelum-sesudah.md    # 7 contoh nyata: caption, chat CS, email, konsistensi persona, dll.
+.claude-plugin/           # plugin Claude Code (marketplace.json + plugin.json)
+.codex-plugin/            # plugin Codex (plugin.json)
+.cursor-plugin/           # plugin Cursor (plugin.json)
+rules/
+  slang-id.md             # aturan generik, copy manual ke tool apa pun
+  slang-id.mdc            # aturan Cursor (alwaysApply: true)
+install.sh                # installer interaktif + mode selalu-on
 ```
 
 Prinsip yang dipegang: **slang itu bumbu, bukan makanan utama**. Skill ini juga mengatur *register*, gaul untuk kasual, profesional santai untuk kerja, baku rapi untuk formal. Salah register lebih fatal daripada salah kata.
 
 ## Instalasi
+
+### Claude Code, Plugin
+
+```text
+/plugin marketplace add https://github.com/ANGGATYASIA/anti-ai-slop-indonesia-slang
+/plugin install slang-id@anti-ai-slop-indonesia-slang
+```
+
+### Codex, Plugin
+
+```bash
+codex plugin marketplace add ANGGATYASIA/anti-ai-slop-indonesia-slang
+codex plugin add slang-id@anti-ai-slop-indonesia-slang
+```
+
+### Cursor, Plugin
+
+```bash
+agent plugin marketplace add https://github.com/ANGGATYASIA/anti-ai-slop-indonesia-slang
+```
+
+Lalu buka **Customize**, cari **slang-id**, pilih **Install**.
+
+### Installer bawaan (semua tool)
 
 ```bash
 git clone https://github.com/ANGGATYASIA/anti-ai-slop-indonesia-slang.git
@@ -54,7 +85,7 @@ Secara default installer juga menulis satu blok direktif ke file konfigurasi glo
 |---|---|
 | Claude Code | `~/.claude/CLAUDE.md` |
 | Codex CLI | `~/.codex/AGENTS.md` |
-| Cursor | `~/.cursor/rules/slang-id-always-on.md` |
+| Cursor | `~/.cursor/rules/slang-id.mdc` |
 
 File-file itu dibaca AI di *setiap* sesi, sehingga gaya skill ini aktif untuk **setiap** output Bahasa Indonesia, termasuk percakapan sehari-hari, bukan cuma saat kamu meminta. Blok direktif ditandai `<!-- slang-id:begin -->` / `<!-- slang-id:end -->` agar rapi dan gampang dicabut.
 

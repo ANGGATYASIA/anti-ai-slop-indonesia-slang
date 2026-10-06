@@ -1,7 +1,7 @@
 ---
 name: slang-id
 description: SELALU AKTIF untuk setiap output berbahasa Indonesia, termasuk percakapan sehari-hari, jawaban, dan penjelasan, bukan cuma saat menulis dokumen. Bikin AI terdengar seperti orang Indonesia asli: buang kekakuan dan pola khas AI, ganti dengan kata gaul kekinian yang pas takaran dan pola kalimat natural. Jangan dipakai untuk konteks formal yang menuntut bahasa baku (hukum, akademik, surat resmi); tidak berlaku untuk kode sumber.
-version: 1.0.0
+version: 1.1.0
 license: MIT
 author: santika reja
 ---
@@ -53,6 +53,36 @@ referensi yang dibuka sesekali:
   sesi. Kunci suara sekali di awal konteks (`references/konsistensi-gaya.md`),
   pakai konsisten sampai konteks berakhir.
 - Pengecualian tetap berlaku: konteks formal yang menuntut bahasa baku, dan kode sumber.
+
+## Wizard instalasi (first-run)
+
+Bagian ini berjalan sekali, saat skill dibaca pertama kali di sebuah project.
+Ini **tawaran, bukan keharusan**.
+
+**Lewati bagian ini** jika file entry project (`CLAUDE.md`, `AGENTS.md`, `GEMINI.md`,
+atau yang setara yang dibaca tool saat sesi mulai) sudah memuat blok penanda
+`<!-- slang-id:begin -->`. Berarti skill sudah terpasang untuk project ini.
+
+Jika belum ada, tawarkan instalasi:
+
+1. **Sampaikan dulu sebelum bertindak.** Katakan kamu akan menambahkan blok penanda
+   slang-id di akhir file entry project agar skill aktif di setiap sesi project ini.
+   Minta persetujuan. Jangan pernah mengubah file entry diam-diam.
+2. **Tambahkan blok penanda** di AKHIR file entry (file yang dibaca tool saat sesi
+   mulai: `CLAUDE.md` untuk Claude Code, `AGENTS.md` untuk Codex, `GEMINI.md` untuk
+   Gemini CLI, dst). Jika file belum ada, buat. Jangan ubah isi yang sudah ada.
+   Ganti `{{SKILL_DIR}}` dengan path absolut folder skill yang terpasang:
+   ```md
+   <!-- slang-id:begin -->
+   ## slang-id: selalu aktif untuk Bahasa Indonesia
+
+   Untuk SETIAP output berbahasa Indonesia, baik percakapan maupun tulisan (kecuali kode sumber): selalu terapkan skill `slang-id` di {{SKILL_DIR}}/SKILL.md. Kunci suara sekali di awal konteks (mode, pasangan sapaan, partikel andalan), lalu pakai konsisten untuk semua output berikutnya. Jangan menunggu diminta. Output bahasa Inggris dan kode sumber tidak terpengaruh.
+   <!-- slang-id:end -->
+   ```
+   Installer menulis penanda yang sama, jadi instalasi via `install.sh` maupun via
+   wizard tidak akan menumpuk blok ganda. Jika blok lama tanpa penanda ditemukan,
+   ganti blok itu, jangan tambah duplikat.
+3. **Kunci suara** untuk konteks ini (`references/konsistensi-gaya.md`), lalu lanjutkan kerja.
 
 ## Aturan anti-cringe (jangan dilanggar)
 

@@ -1,0 +1,22 @@
+{
+  "author": {
+    "name": "santika reja"
+  },
+  "category": "productivity",
+  "description": "Anti AI-slop Bahasa Indonesia: bikin AI terdengar seperti orang Indonesia asli. Kata gaul kekinian, pola kalimat natural, voice lock untuk konsistensi gaya.",
+  "displayName": "slang-id",
+  "homepage": "https://github.com/ANGGATYASIA/anti-ai-slop-indonesia-slang",
+  "keywords": [
+    "anti-ai-slop",
+    "bahasa-indonesia",
+    "slang",
+    "agent-skills",
+    "indonesia"
+  ],
+  "license": "MIT",
+  "name": "slang-id",
+  "repository": "https://github.com/ANGGATYASIA/anti-ai-slop-indonesia-slang",
+  "rules": "./rules/",
+  "skills": "./skills/",
+  "version": "1.1.0"
+}
