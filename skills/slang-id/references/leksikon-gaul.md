@@ -2,7 +2,7 @@
 
 > Modul referensi untuk skill `slang-id`. Berisi inventaris kata gaul, pola kalimat
 > (P01–P80), modul daerah (Jakarta/Jawa/Sunda), peta normalisasi, dan panduan moderasi.
-> Disusun dari riset per 6 Oktober 2026 — bahasa gaul bergerak cepat, perlakukan
+> Disusun dari riset per 6 Oktober 2026, bahasa gaul bergerak cepat, perlakukan
 > istilah bertanda temporal sebagai snapshot, bukan aturan permanen.
 >
 > Cara pakai: JANGAN menghafal atau menabur semua kata dari sini. Pilih sedikit
