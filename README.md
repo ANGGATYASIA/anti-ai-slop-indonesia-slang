@@ -46,6 +46,23 @@ Alternatif: pakai [skills.sh](https://skills.sh): `npx skills add ANGGATYASIA/an
 
 Setelah instalasi, restart tool-nya bila skill belum muncul. Skill aktif otomatis setiap kamu menulis atau menyunting teks berbahasa Indonesia.
 
+## Mode selalu-on (harness level)
+
+Secara default installer juga menulis satu blok direktif ke file konfigurasi global tiap tool:
+
+| Tool | File yang ditulis |
+|---|---|
+| Claude Code | `~/.claude/CLAUDE.md` |
+| Codex CLI | `~/.codex/AGENTS.md` |
+| Cursor | `~/.cursor/rules/slang-id-always-on.md` |
+
+File-file itu dibaca AI di *setiap* sesi, sehingga gaya skill ini aktif untuk **setiap** output Bahasa Indonesia, termasuk percakapan sehari-hari, bukan cuma saat kamu meminta. Blok direktif ditandai `<!-- slang-id:begin -->` / `<!-- slang-id:end -->` agar rapi dan gampang dicabut.
+
+- Nonaktifkan saat instalasi: `./install.sh --no-always-on`
+- Cabut kapan saja: `./install.sh --uninstall --tools claude,codex,cursor`
+
+Catatan jujur: skill bekerja di lapisan instruksi, bukan mengubah bobot model. Mode selalu-on adalah mekanisme terkuat yang bisa dilakukan sebuah skill: memastikan instruksi gaya ini dibaca di setiap sesi, sehingga karakteristik output AI berubah konsisten.
+
 ## Kompatibilitas
 
 Mengikuti standar [SKILL.md](https://agentskills.io), satu format yang dibaca Claude Code, Codex CLI, Cursor, Gemini CLI, OpenClaw, Hermes Agent, dan ~40 tools lainnya. Tidak ada kode yang dijalankan, tidak ada ketergantungan, tidak ada telemetri. Cuma Markdown.

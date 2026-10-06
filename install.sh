@@ -10,14 +10,23 @@
 #   ./install.sh --tools agents --method copy --scope project --yes
 #   ./install.sh --uninstall --tools claude --yes
 #
+# Mode selalu-on (harness level): selain memasang skill, installer menulis satu
+# blok direktif ke file konfigurasi global tiap tool (mis. ~/.claude/CLAUDE.md)
+# sehingga skill aktif untuk SETIAP output Bahasa Indonesia, termasuk percakapan.
+# Aktif secara default; matikan dengan --no-always-on. Dicabut otomatis oleh
+# --uninstall.
+#
 # Opsi:
 #   --tools   daftar tool dipisah koma: claude, codex, cursor, agents, custom
 #             (agents = standar ~/.agents/skills yang dibaca banyak tools baru)
 #   --method  symlink | copy   (default: symlink)
 #   --scope   user | project    (default: user; project = folder .<tool>/skills di direktori aktif)
 #   --custom-dir PATH          (wajib jika --tools memuat "custom")
+#   --always-on / --no-always-on
+#             tulis/jangan tulis direktif selalu-on ke konfigurasi global tool
+#             (default: selalu-on)
 #   --yes     lewati semua konfirmasi
-#   --uninstall               hapus instalasi, bukan pasang
+#   --uninstall               hapus instalasi + cabut direktif selalu-on
 #   -h, --help                tampilkan bantuan
 
 set -euo pipefail
@@ -28,6 +37,7 @@ SRC_DIR="$SCRIPT_DIR/skills/$SKILL_NAME"
 
 METHOD="symlink"; METHOD_GIVEN=0
 SCOPE="user"; SCOPE_GIVEN=0
+ALWAYS_ON=1; ALWAYS_ON_GIVEN=0
 TOOLS=""
 CUSTOM_DIR=""
 ASSUME_YES=0
@@ -62,6 +72,8 @@ while [[ $# -gt 0 ]]; do
     --method)     METHOD="$2"; METHOD_GIVEN=1; shift 2 ;;
     --scope)      SCOPE="$2"; SCOPE_GIVEN=1; shift 2 ;;
     --custom-dir) CUSTOM_DIR="$2"; shift 2 ;;
+    --always-on)    ALWAYS_ON=1; ALWAYS_ON_GIVEN=1; shift ;;
+    --no-always-on) ALWAYS_ON=0; ALWAYS_ON_GIVEN=1; shift ;;
     --yes)        ASSUME_YES=1; shift ;;
     --uninstall)  UNINSTALL=1; shift ;;
     -h|--help)    usage; exit 0 ;;
@@ -100,6 +112,70 @@ confirm() {
   [[ "$ASSUME_YES" == 1 ]] && return 0
   ask "$1 [y/N]:"
   [[ "$REPLY" =~ ^[yY]$ ]]
+}
+
+# ---------- mode selalu-on (harness level) ----------
+# Menulis satu blok direktif bertanda ke file konfigurasi global tiap tool,
+# sehingga skill aktif untuk SETIAP output Bahasa Indonesia (termasuk percakapan).
+
+harness_target() { # $1 = tool id -> echo path file konfigurasi, atau kosong
+  case "$1" in
+    claude)
+      [[ "$SCOPE" == "project" ]] && echo "$PWD/CLAUDE.md" || echo "$HOME/.claude/CLAUDE.md" ;;
+    codex)
+      [[ "$SCOPE" == "project" ]] && echo "$PWD/AGENTS.md" || echo "$HOME/.codex/AGENTS.md" ;;
+    cursor)
+      [[ "$SCOPE" == "project" ]] && echo "$PWD/.cursor/rules/slang-id-always-on.md" \
+                                   || echo "$HOME/.cursor/rules/slang-id-always-on.md" ;;
+    *) echo "" ;;
+  esac
+}
+
+directive_block() { # $1 = direktori skill yang terpasang
+  cat <<EOF
+<!-- slang-id:begin -->
+## slang-id: selalu aktif untuk Bahasa Indonesia
+
+Untuk SETIAP output berbahasa Indonesia, baik percakapan maupun tulisan (kecuali kode sumber): selalu terapkan skill \`slang-id\` di $1/SKILL.md. Kunci suara sekali di awal konteks (mode, pasangan sapaan, partikel andalan), lalu pakai konsisten untuk semua output berikutnya. Jangan menunggu diminta. Output bahasa Inggris dan kode sumber tidak terpengaruh.
+<!-- slang-id:end -->
+EOF
+}
+
+enable_always_on() { # $1 = tool id, $2 = direktori skill terpasang
+  local target
+  target="$(harness_target "$1")"
+  if [[ -z "$target" ]]; then
+    log "  - $1: tidak ada file konfigurasi global standar (selalu-on dilewati)"
+    return 0
+  fi
+  mkdir -p "$(dirname "$target")"
+  if [[ "$1" == "cursor" ]]; then
+    directive_block "$2" > "$target"
+    log "  + selalu-on: $target"
+    return 0
+  fi
+  touch "$target"
+  if grep -q "slang-id:begin" "$target" 2>/dev/null; then
+    log "  = sudah ada: $target"
+  else
+    { echo ""; directive_block "$2"; } >> "$target"
+    log "  + selalu-on: $target"
+  fi
+}
+
+disable_always_on() { # $1 = tool id (dipakai saat --uninstall)
+  local target
+  target="$(harness_target "$1")"
+  [[ -z "$target" ]] && return 0
+  if [[ "$1" == "cursor" ]]; then
+    if [[ -f "$target" ]]; then rm -f "$target"; log "  - selalu-on dicabut: $target"; fi
+    return 0
+  fi
+  if [[ -f "$target" ]] && grep -q "slang-id:begin" "$target" 2>/dev/null; then
+    if sed --version >/dev/null 2>&1; then sed -i '/<!-- slang-id:begin -->/,/<!-- slang-id:end -->/d' "$target";
+    else sed -i '' '/<!-- slang-id:begin -->/,/<!-- slang-id:end -->/d' "$target"; fi
+    log "  - selalu-on dicabut: $target"
+  fi
 }
 
 do_install_one() { # $1 = tool id
@@ -173,6 +249,17 @@ if [[ "$ASSUME_YES" == 0 ]]; then
       *) SCOPE="user" ;;
     esac
   fi
+  if [[ "$ALWAYS_ON_GIVEN" == 0 ]]; then
+    log ""
+    log "Mode selalu-on (disarankan): menulis 1 blok instruksi ke file konfigurasi"
+    log "global tool, sehingga gaya skill ini aktif untuk SETIAP output Bahasa"
+    log "Indonesia termasuk percakapan, bukan cuma saat diminta."
+    ask "Aktifkan selalu-on? [Y/n]:"
+    case "${REPLY:-Y}" in
+      [nN]*) ALWAYS_ON=0 ;;
+      *)     ALWAYS_ON=1 ;;
+    esac
+  fi
 fi
 
 BASE="$HOME"; BASE_DESC="home ($HOME)"
@@ -183,7 +270,7 @@ fi
 if [[ "$UNINSTALL" == 1 ]]; then
   log "Uninstall skill '$SKILL_NAME' (scope: $SCOPE)..."
   IFS=',' read -ra IDS <<< "$TOOLS"
-  for id in "${IDS[@]}"; do do_uninstall_one "$id"; done
+  for id in "${IDS[@]}"; do do_uninstall_one "$id"; disable_always_on "$id"; done
   log "Selesai."
   exit 0
 fi
@@ -197,6 +284,20 @@ for id in "${IDS[@]}"; do
   [[ -n "${TOOL_SUBDIR[$id]:-}" || "$id" == "custom" ]] || { log "Tool tidak dikenal: $id (dilewati)"; continue; }
   do_install_one "$id"
 done
+
+if [[ "$ALWAYS_ON" == 1 ]]; then
+  log ""
+  log "Mengaktifkan mode selalu-on..."
+  for id in "${IDS[@]}"; do
+    [[ "$id" == "custom" ]] && continue
+    [[ -z "${TOOL_SUBDIR[$id]:-}" ]] && continue
+    if [[ "$SCOPE" == "project" ]]; then
+      enable_always_on "$id" "$PWD/${TOOL_SUBDIR[$id]}/$SKILL_NAME"
+    else
+      enable_always_on "$id" "$HOME/${TOOL_SUBDIR[$id]}/$SKILL_NAME"
+    fi
+  done
+fi
 
 log ""
 log "Selesai. Verifikasi cepat:"

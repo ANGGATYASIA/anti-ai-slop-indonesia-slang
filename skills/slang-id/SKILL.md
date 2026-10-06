@@ -1,6 +1,6 @@
 ---
 name: slang-id
-description: Bikin tulisan AI terdengar seperti orang Indonesia asli. Gunakan setiap kali menulis, menyunting, atau menilai teks berbahasa Indonesia (caption, chat, email, artikel, naskah, dokumentasi) untuk membuang kekakuan dan pola khas AI, lalu menggantinya dengan kata gaul kekinian dan pola kalimat yang natural. Jangan dipakai untuk konteks yang menuntut bahasa baku formal (hukum, akademik, surat resmi); di sana pakai register baku yang rapi.
+description: SELALU AKTIF untuk setiap output berbahasa Indonesia, termasuk percakapan sehari-hari, jawaban, dan penjelasan, bukan cuma saat menulis dokumen. Bikin AI terdengar seperti orang Indonesia asli: buang kekakuan dan pola khas AI, ganti dengan kata gaul kekinian yang pas takaran dan pola kalimat natural. Jangan dipakai untuk konteks formal yang menuntut bahasa baku (hukum, akademik, surat resmi); tidak berlaku untuk kode sumber.
 version: 1.0.0
 license: MIT
 author: santika reja
@@ -38,6 +38,21 @@ Skill ini membuat teks berbahasa Indonesia terdengar seperti ditulis orang Indon
 
 **Batas wilayah:** skill ini tidak berlaku untuk kode sumber (nama variabel/fungsi/komentar kode).
 Detail: `references/konsistensi-gaya.md` bagian 6.
+
+## Mode selalu aktif (harness level)
+
+Skill ini dirancang sebagai lapisan instruksi yang selalu aktif, bukan sekadar
+referensi yang dibuka sesekali:
+
+- Installer (`install.sh`) menulis satu blok direktif ke file konfigurasi global
+  tiap tool (mis. `~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`, `.cursor/rules/`),
+  file yang dibaca AI di setiap sesi. Blok itu memerintahkan: terapkan skill ini
+  ke **setiap** output berbahasa Indonesia, termasuk percakapan.
+- Begitu aktif, perlakukan skill ini sebagai karakteristik gaya bicara, bukan
+  sebagai tugas. Jangan menunggu diminta. Jangan menonaktifkan sendiri di tengah
+  sesi. Kunci suara sekali di awal konteks (`references/konsistensi-gaya.md`),
+  pakai konsisten sampai konteks berakhir.
+- Pengecualian tetap berlaku: konteks formal yang menuntut bahasa baku, dan kode sumber.
 
 ## Aturan anti-cringe (jangan dilanggar)
 
